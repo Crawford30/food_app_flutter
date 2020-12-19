@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/src/commons.dart';
+import 'package:food_app/src/widgets/title.dart';
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -19,7 +20,10 @@ class _HomeState extends State<Home> {
               children: <Widget> [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("What would you like to eat?", style: TextStyle(fontSize: 18),),
+                  child: customText(
+                    text: "What are you looking for?",
+                    size: 18 ,
+                  )
                 ),
                 Stack(
                   children: [
@@ -54,7 +58,7 @@ class _HomeState extends State<Home> {
                     color: white,
                     boxShadow: [
                       BoxShadow(
-                          color: grey,
+                          color: grey[300],
                           offset: Offset(1,1),
                           blurRadius: 4
                       )
