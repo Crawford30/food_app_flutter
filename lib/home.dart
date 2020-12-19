@@ -13,11 +13,35 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: ListView(
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget> [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("What would you like to eat?", style: TextStyle(fontSize: 18),),
+                ),
+                Stack(
+                  children: [
+                    IconButton(icon: Icon(Icons.notifications_none), onPressed: (){}),
+                    Positioned(
+                      top: 12,
+                      right: 12,
+                      child: Container(
+                        height: 10,
+                        width: 10,
+                        decoration: BoxDecoration(
+                            color: red,
+                            borderRadius: BorderRadius.circular(20)
+                        ),
+                      ),
+                    ),
+                  ],
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("What would you like to eat?", style: TextStyle(fontSize: 18),),
+                ),
+              ],
             ),
+            
+
           ],
         ),
       ),
