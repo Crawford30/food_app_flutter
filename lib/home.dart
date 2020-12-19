@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
                   child: customText(
                     text: "What are you looking for?",
                     size: 18 ,
-                  )
+                  ),
                 ),
                 Stack(
                   children: [
@@ -75,7 +75,52 @@ class _HomeState extends State<Home> {
                   trailing: Icon(Icons.filter_list, color: red,),
                 ),
               ),
-            )
+            ),
+
+            //======SPACE ======
+            SizedBox(height: 5,),  //adds space
+
+            //===========HORIZONTAL SCROLL VIEW ===
+            Container(
+              height: 120,
+              child: ListView.builder(
+                itemCount: 14,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (_, index){
+
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+
+                          decoration: BoxDecoration(
+                            color: white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: red[50],
+                                  offset: Offset(4,6),
+                                  blurRadius: 20
+                              ),
+                            ],
+                          ),
+
+                          child: Padding(padding: EdgeInsets.all(4),
+                            child: Image.asset("images/home.jpg", width: 50,),
+                          ),
+
+                        ),
+                        //======SPACE ======
+                        SizedBox(height: 10,),  //adds space
+                        customText(text: "Salad", size: 14,)
+
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+
             
 
           ],
