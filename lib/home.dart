@@ -13,6 +13,7 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: ListView(
           children: <Widget>[
+            //========Nav Bar ====
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget> [
@@ -38,8 +39,36 @@ class _HomeState extends State<Home> {
                   ],
 
                 ),
+
               ],
             ),
+
+             //======SPACE ======
+            SizedBox(height: 5,),  //adds space
+
+            //====SEARCH BOX =====
+            Container(
+              decoration: BoxDecoration(
+                  color: white,
+                  boxShadow: [
+                    BoxShadow(
+                        color: grey,
+                        offset: Offset(1,1),
+                        blurRadius: 4
+                    )
+                  ]
+              ),
+              child: ListTile(
+                leading: Icon(Icons.search, color: red,),
+                title: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Find food and restaurants..",
+                    border: InputBorder.none,
+                  ),
+                ),
+                trailing: Icon(Icons.filter_list, color: red,),
+              ),
+            )
             
 
           ],
