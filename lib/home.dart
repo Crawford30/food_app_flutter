@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/src/commons.dart';
 import 'package:food_app/src/widgets/categories.dart';
 import 'package:food_app/src/widgets/title.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -85,9 +86,48 @@ class _HomeState extends State<Home> {
             //import the category widget
             Categories(),
 
+            // //======SPACE ======
+            // SizedBox(height: 2,),  //adds space
+
+            //============POPULAR FOOD SECTION =====
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: customText(text: "Featured", size: 20,),
+            ),
+
+           Container(
+             height: 200,
+             child: ListView.builder(
+                 scrollDirection: Axis.horizontal,
+                 itemCount: 2,
+                 itemBuilder: (_, index){
+               return  Padding(padding: EdgeInsets.all(8),
+               child: Container(
+                 height: 200,
+                 width: 200,
+                 decoration: BoxDecoration(
+                     color: white,
+                     boxShadow: [
+                       BoxShadow(
+                           color: grey[300],
+                           offset: Offset(1,1),
+                           blurRadius: 4
+                       )
+                     ]
+                 ),
+                 child: Column(
+
+                     children: <Widget> [
+                       Image.asset("images/home.jpg", height: 140,),
+                     ]
+
+                 ),
 
 
-            
+               ),);
+
+             }),
+           ),
 
           ],
         ),
