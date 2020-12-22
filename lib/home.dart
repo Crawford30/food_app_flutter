@@ -126,7 +126,7 @@ class _HomeState extends State<Home> {
                              padding: const EdgeInsets.all(8.0),
                              child: customText(text: "Some food"),
                            ),
-                         Padding(padding: EdgeInsets.all(8),
+                           Padding(padding: EdgeInsets.all(8),
                          child:   Container(
                            decoration: BoxDecoration(
                                borderRadius: BorderRadius.circular(20),
@@ -140,11 +140,29 @@ class _HomeState extends State<Home> {
                                ]
                            ),
                            child: Padding(
-                             padding: const EdgeInsets.all(8.0),
+                             padding: const EdgeInsets.all(4.0),
                              child: Icon(Icons.favorite_border,color: red, size: 18,),
                            ),
                          ),)
                          ],
+                       ),
+
+
+                       Row(
+                         children: <Widget>[
+                           Padding(
+                             padding: const EdgeInsets.only(left:8.0),
+
+                             child: customText(text: "4.7", size: 14,),
+                           ),
+                           SizedBox(width: 2,),
+                           Icon(Icons.star, color: red, size:16,),
+                           Icon(Icons.star, color: red, size:16,),
+                           Icon(Icons.star, color: red, size:16,),
+                           Icon(Icons.star, color: red, size:16,),
+                           Icon(Icons.star, color: grey, size:16,),
+                         ],
+
                        ),
                      ]
 
