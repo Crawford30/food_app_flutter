@@ -96,14 +96,14 @@ class _HomeState extends State<Home> {
             ),
 
            Container(
-             height: 200,
+             height: 240,
              child: ListView.builder(
                  scrollDirection: Axis.horizontal,
                  itemCount: 2,
                  itemBuilder: (_, index){
                return  Padding(padding: EdgeInsets.all(8),
                child: Container(
-                 height: 200,
+                 height: 240,
                  width: 200,
                  decoration: BoxDecoration(
                      color: white,
@@ -118,7 +118,34 @@ class _HomeState extends State<Home> {
                  child: Column(
 
                      children: <Widget> [
-                       Image.asset("images/home.jpg", height: 140,),
+                       Image.asset("images/home.jpg", height: 140, width:140),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           Padding(
+                             padding: const EdgeInsets.all(8.0),
+                             child: customText(text: "Some food"),
+                           ),
+                         Padding(padding: EdgeInsets.all(8),
+                         child:   Container(
+                           decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(20),
+                               color: white,
+                               boxShadow: [
+                                 BoxShadow(
+                                     color: grey[300],
+                                     offset: Offset(1,1),
+                                     blurRadius: 4
+                                 )
+                               ]
+                           ),
+                           child: Padding(
+                             padding: const EdgeInsets.all(8.0),
+                             child: Icon(Icons.favorite_border,color: red, size: 18,),
+                           ),
+                         ),)
+                         ],
+                       ),
                      ]
 
                  ),
