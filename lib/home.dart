@@ -149,21 +149,32 @@ class _HomeState extends State<Home> {
 
 
                        Row(
-                         children: <Widget>[
-                           Padding(
-                             padding: const EdgeInsets.only(left:8.0),
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           Row(
+                             children: <Widget>[
+                               Padding(
+                                 padding: const EdgeInsets.only(left:8.0),
 
-                             child: customText(text: "4.7", size: 14,),
+                                 child: customText(text: "4.7", size: 14,),
+                               ),
+                               SizedBox(width: 2,),
+                               Icon(Icons.star, color: red, size:16,),
+                               Icon(Icons.star, color: red, size:16,),
+                               Icon(Icons.star, color: red, size:16,),
+                               Icon(Icons.star, color: red, size:16,),
+                               Icon(Icons.star, color: grey, size:16,),
+                             ],
+
                            ),
-                           SizedBox(width: 2,),
-                           Icon(Icons.star, color: red, size:16,),
-                           Icon(Icons.star, color: red, size:16,),
-                           Icon(Icons.star, color: red, size:16,),
-                           Icon(Icons.star, color: red, size:16,),
-                           Icon(Icons.star, color: grey, size:16,),
+                           
+                           Padding(
+                             padding: const EdgeInsets.only(right:8.0),
+                             child: customText(text: "\$12.99", weight: FontWeight.bold,),
+                           ),
                          ],
-
                        ),
+
                      ]
 
                  ),
